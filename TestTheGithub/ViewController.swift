@@ -28,10 +28,8 @@ class ViewController: UIViewController {
 
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        //mainScrollView.backgroundColor = UIColor.orange
         for index in 0..<iconName.count {
             let image = UIImage(named: "\(iconName[index]!)-icon.png")
-            //let image = UIImage(named: "golf-icon.png")
             print("\(iconName[index]!)-icon.png")
             let imageView = UIImageView(image: image)
             images.append(imageView)
@@ -47,7 +45,6 @@ class ViewController: UIViewController {
             print("mainScrollViewHeight: \(mainScrollView.frame.size.height)")
             print("newX :\(newX) and newY:\(newY)")
             
-            //imageView.backgroundColor = UIColor.blue
             imageView.frame = CGRect(x: newX-50, y: newY-50, width: 100, height: 100)
         }
         print("Count: \(images.count)")
