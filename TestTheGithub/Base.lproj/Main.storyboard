@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -88,53 +89,75 @@
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2nB-uF-tsY">
                                 <color key="backgroundColor" red="0.0" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="srq-RX-fN8"/>
+                                </constraints>
                             </view>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="Vj4-Y2-iqd">
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="btR-qv-jAg">
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="jfz-I7-ZwE">
                                         <subviews>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="curry" translatesAutoresizingMaskIntoConstraints="NO" id="dwb-fH-HWl"/>
-                                        </subviews>
-                                    </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="1cm-iq-9cw">
-                                        <subviews>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="daptors" translatesAutoresizingMaskIntoConstraints="NO" id="6fv-8r-pow">
+                                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="btR-qv-jAg">
+                                                <subviews>
+                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="curry" translatesAutoresizingMaskIntoConstraints="NO" id="dwb-fH-HWl"/>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="1cm-iq-9cw">
+                                                <subviews>
+                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="daptors" translatesAutoresizingMaskIntoConstraints="NO" id="6fv-8r-pow">
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" secondItem="6fv-8r-pow" secondAttribute="height" multiplier="1:1" id="DrG-6p-Pqt"/>
+                                                        </constraints>
+                                                    </imageView>
+                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="huixiong" translatesAutoresizingMaskIntoConstraints="NO" id="2zm-LI-oDk"/>
+                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="rocket" translatesAutoresizingMaskIntoConstraints="NO" id="RR7-lF-HZy"/>
+                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="lakers" translatesAutoresizingMaskIntoConstraints="NO" id="e87-l2-Pe1"/>
+                                                </subviews>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="80" id="sV3-R3-Wlx"/>
+                                                    <constraint firstItem="RR7-lF-HZy" firstAttribute="width" secondItem="6fv-8r-pow" secondAttribute="width" id="6kA-04-mnp"/>
+                                                    <constraint firstItem="2zm-LI-oDk" firstAttribute="width" secondItem="6fv-8r-pow" secondAttribute="width" id="Fmd-Ke-50w"/>
+                                                    <constraint firstItem="e87-l2-Pe1" firstAttribute="height" secondItem="6fv-8r-pow" secondAttribute="height" id="Zov-jm-cAJ"/>
+                                                    <constraint firstItem="e87-l2-Pe1" firstAttribute="width" secondItem="6fv-8r-pow" secondAttribute="width" id="dTc-1t-BIq"/>
+                                                    <constraint firstItem="RR7-lF-HZy" firstAttribute="height" secondItem="6fv-8r-pow" secondAttribute="height" id="fg1-D8-Djr"/>
+                                                    <constraint firstItem="2zm-LI-oDk" firstAttribute="height" secondItem="6fv-8r-pow" secondAttribute="height" id="pR0-3I-r3B"/>
                                                 </constraints>
-                                            </imageView>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="huixiong" translatesAutoresizingMaskIntoConstraints="NO" id="2zm-LI-oDk"/>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="rocket" translatesAutoresizingMaskIntoConstraints="NO" id="RR7-lF-HZy"/>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="lakers" translatesAutoresizingMaskIntoConstraints="NO" id="e87-l2-Pe1"/>
+                                                <variation key="heightClass=compact" axis="vertical"/>
+                                            </stackView>
+                                        </subviews>
+                                        <variation key="heightClass=compact" axis="horizontal"/>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="yeD-SY-VMo">
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="wRR-bf-5K3">
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose a team for the MVP." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ib0-QQ-2Ep">
+                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                                        <color key="textColor" red="1" green="0.71026695997112133" blue="0.19613057911805609" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="20" id="kxL-Od-6J7"/>
+                                                </constraints>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="Bj1-5b-nz6">
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Which one is the best?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v9e-Sg-9ND">
+                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                                        <color key="textColor" red="0.0" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You Decide!!!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oGq-fc-jaj">
+                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                                        <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
                                         </subviews>
                                         <constraints>
-                                            <constraint firstItem="e87-l2-Pe1" firstAttribute="height" secondItem="6fv-8r-pow" secondAttribute="height" id="Zov-jm-cAJ"/>
-                                            <constraint firstItem="RR7-lF-HZy" firstAttribute="height" secondItem="6fv-8r-pow" secondAttribute="height" id="fg1-D8-Djr"/>
-                                            <constraint firstItem="2zm-LI-oDk" firstAttribute="height" secondItem="6fv-8r-pow" secondAttribute="height" id="pR0-3I-r3B"/>
+                                            <constraint firstItem="Bj1-5b-nz6" firstAttribute="height" secondItem="wRR-bf-5K3" secondAttribute="height" id="SlG-p6-8OU"/>
                                         </constraints>
-                                    </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" alignment="bottom" translatesAutoresizingMaskIntoConstraints="NO" id="wRR-bf-5K3">
-                                        <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose a team for the MVP." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ib0-QQ-2Ep">
-                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
-                                                <color key="textColor" red="1" green="0.71026695997112133" blue="0.19613057911805609" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                        </subviews>
-                                    </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="Bj1-5b-nz6">
-                                        <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Which one is the best?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v9e-Sg-9ND">
-                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
-                                                <color key="textColor" red="0.0" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You Decide!!!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oGq-fc-jaj">
-                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
-                                                <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                        </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="PWK-GH-Zuh">
                                         <subviews>
@@ -153,6 +176,9 @@
                                                 </state>
                                             </button>
                                         </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="60" id="B3x-qE-7Sn"/>
+                                        </constraints>
                                     </stackView>
                                 </subviews>
                             </stackView>
@@ -160,13 +186,12 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="Vj4-Y2-iqd" secondAttribute="trailing" constant="10" id="17y-XP-Y7X"/>
+                            <constraint firstItem="Vj4-Y2-iqd" firstAttribute="top" secondItem="2nB-uF-tsY" secondAttribute="top" constant="30" id="3ug-ew-uaJ"/>
                             <constraint firstItem="Vj4-Y2-iqd" firstAttribute="leading" secondItem="2EM-bT-lCZ" secondAttribute="leading" constant="10" id="FZJ-VU-0Hn"/>
                             <constraint firstItem="2nB-uF-tsY" firstAttribute="trailing" secondItem="Vj4-Y2-iqd" secondAttribute="trailing" constant="10" id="IuL-Dc-RXs"/>
-                            <constraint firstItem="2nB-uF-tsY" firstAttribute="top" secondItem="2EM-bT-lCZ" secondAttribute="top" id="N3v-7o-jBB"/>
                             <constraint firstItem="2nB-uF-tsY" firstAttribute="leading" secondItem="2EM-bT-lCZ" secondAttribute="leading" id="NTB-NN-KjW"/>
                             <constraint firstAttribute="bottom" secondItem="Vj4-Y2-iqd" secondAttribute="bottom" constant="10" id="gZD-bO-1kr"/>
                             <constraint firstItem="Vj4-Y2-iqd" firstAttribute="top" secondItem="opT-ex-UGy" secondAttribute="bottom" constant="10" id="wHp-ao-pHc"/>
-                            <constraint firstItem="Fg2-xi-BrK" firstAttribute="top" secondItem="2nB-uF-tsY" secondAttribute="bottom" constant="627" id="xM9-GL-GEd"/>
                         </constraints>
                     </view>
                 </viewController>
