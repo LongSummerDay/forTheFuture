@@ -39,6 +39,17 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7VI-SF-b8T"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mie-MV-s6X">
+                                <frame key="frameInset" minX="275" minY="146" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Next">
+                                    <color key="titleShadowColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="Gf9-NE-dbJ" kind="show" id="v1x-IV-vgA"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -63,8 +74,108 @@
             </objects>
             <point key="canvasLocation" x="116" y="121.88905547226388"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="DZT-Uc-zcz">
+            <objects>
+                <viewController id="Gf9-NE-dbJ" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="opT-ex-UGy"/>
+                        <viewControllerLayoutGuide type="bottom" id="Fg2-xi-BrK"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="2EM-bT-lCZ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2nB-uF-tsY">
+                                <color key="backgroundColor" red="0.0" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="Vj4-Y2-iqd">
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="btR-qv-jAg">
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="curry" translatesAutoresizingMaskIntoConstraints="NO" id="dwb-fH-HWl"/>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="1cm-iq-9cw">
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="daptors" translatesAutoresizingMaskIntoConstraints="NO" id="6fv-8r-pow"/>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="huixiong" translatesAutoresizingMaskIntoConstraints="NO" id="2zm-LI-oDk"/>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="rocket" translatesAutoresizingMaskIntoConstraints="NO" id="RR7-lF-HZy"/>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="lakers" translatesAutoresizingMaskIntoConstraints="NO" id="e87-l2-Pe1"/>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" alignment="bottom" translatesAutoresizingMaskIntoConstraints="NO" id="wRR-bf-5K3">
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose a team for the MVP." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ib0-QQ-2Ep">
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                                <color key="textColor" red="1" green="0.71026695997112133" blue="0.19613057911805609" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="Bj1-5b-nz6">
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Which one is the best?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v9e-Sg-9ND">
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                                <color key="textColor" red="0.0" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You Decide!!!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oGq-fc-jaj">
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                                <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="PWK-GH-Zuh">
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xJZ-Zv-SpH">
+                                                <color key="backgroundColor" red="1" green="0.26359986279405545" blue="0.1090823986176267" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="30"/>
+                                                <state key="normal" title="Vote">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fa5-oz-XUj">
+                                                <color key="backgroundColor" red="0.18294266166303774" green="0.98149357699680473" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="30"/>
+                                                <state key="normal" title="Check">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="1cm-iq-9cw" firstAttribute="top" secondItem="Vj4-Y2-iqd" secondAttribute="top" constant="458" id="0ZP-6J-Iyz"/>
+                                    <constraint firstItem="wRR-bf-5K3" firstAttribute="top" secondItem="Vj4-Y2-iqd" secondAttribute="top" constant="538" id="p9G-Cv-TqX"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="Vj4-Y2-iqd" secondAttribute="trailing" constant="10" id="17y-XP-Y7X"/>
+                            <constraint firstItem="Vj4-Y2-iqd" firstAttribute="leading" secondItem="2EM-bT-lCZ" secondAttribute="leading" constant="10" id="FZJ-VU-0Hn"/>
+                            <constraint firstItem="2nB-uF-tsY" firstAttribute="trailing" secondItem="Vj4-Y2-iqd" secondAttribute="trailing" constant="10" id="IuL-Dc-RXs"/>
+                            <constraint firstItem="2nB-uF-tsY" firstAttribute="top" secondItem="2EM-bT-lCZ" secondAttribute="top" id="N3v-7o-jBB"/>
+                            <constraint firstItem="2nB-uF-tsY" firstAttribute="leading" secondItem="2EM-bT-lCZ" secondAttribute="leading" id="NTB-NN-KjW"/>
+                            <constraint firstAttribute="bottom" secondItem="Vj4-Y2-iqd" secondAttribute="bottom" constant="10" id="gZD-bO-1kr"/>
+                            <constraint firstItem="Vj4-Y2-iqd" firstAttribute="top" secondItem="opT-ex-UGy" secondAttribute="bottom" constant="10" id="wHp-ao-pHc"/>
+                            <constraint firstItem="Fg2-xi-BrK" firstAttribute="top" secondItem="2nB-uF-tsY" secondAttribute="bottom" constant="627" id="xM9-GL-GEd"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="K16-jU-KO4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="885.60000000000002" y="121.88905547226388"/>
+        </scene>
     </scenes>
     <resources>
+        <image name="curry" width="400" height="458"/>
+        <image name="daptors" width="256" height="256"/>
+        <image name="huixiong" width="256" height="256"/>
+        <image name="lakers" width="256" height="256"/>
+        <image name="rocket" width="256" height="256"/>
         <image name="spaceball-icon" width="32" height="32"/>
     </resources>
 </document>
