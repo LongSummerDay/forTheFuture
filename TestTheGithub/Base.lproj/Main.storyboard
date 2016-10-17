@@ -98,11 +98,20 @@
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="1cm-iq-9cw">
                                         <subviews>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="daptors" translatesAutoresizingMaskIntoConstraints="NO" id="6fv-8r-pow"/>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="daptors" translatesAutoresizingMaskIntoConstraints="NO" id="6fv-8r-pow">
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="80" id="sV3-R3-Wlx"/>
+                                                </constraints>
+                                            </imageView>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="huixiong" translatesAutoresizingMaskIntoConstraints="NO" id="2zm-LI-oDk"/>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="rocket" translatesAutoresizingMaskIntoConstraints="NO" id="RR7-lF-HZy"/>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="lakers" translatesAutoresizingMaskIntoConstraints="NO" id="e87-l2-Pe1"/>
                                         </subviews>
+                                        <constraints>
+                                            <constraint firstItem="e87-l2-Pe1" firstAttribute="height" secondItem="6fv-8r-pow" secondAttribute="height" id="Zov-jm-cAJ"/>
+                                            <constraint firstItem="RR7-lF-HZy" firstAttribute="height" secondItem="6fv-8r-pow" secondAttribute="height" id="fg1-D8-Djr"/>
+                                            <constraint firstItem="2zm-LI-oDk" firstAttribute="height" secondItem="6fv-8r-pow" secondAttribute="height" id="pR0-3I-r3B"/>
+                                        </constraints>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" alignment="bottom" translatesAutoresizingMaskIntoConstraints="NO" id="wRR-bf-5K3">
                                         <subviews>
@@ -146,10 +155,6 @@
                                         </subviews>
                                     </stackView>
                                 </subviews>
-                                <constraints>
-                                    <constraint firstItem="1cm-iq-9cw" firstAttribute="top" secondItem="Vj4-Y2-iqd" secondAttribute="top" constant="458" id="0ZP-6J-Iyz"/>
-                                    <constraint firstItem="wRR-bf-5K3" firstAttribute="top" secondItem="Vj4-Y2-iqd" secondAttribute="top" constant="538" id="p9G-Cv-TqX"/>
-                                </constraints>
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
