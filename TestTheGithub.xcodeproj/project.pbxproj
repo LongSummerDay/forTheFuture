@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0C4C8FBF1DB65BE00090FEA7 /* CurryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C4C8FBE1DB65BE00090FEA7 /* CurryVC.swift */; };
+		0C4C8FC31DB663290090FEA7 /* CalculatorVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C4C8FC21DB663290090FEA7 /* CalculatorVC.swift */; };
 		0CBE44541DB10DBC0095EAC9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CBE44531DB10DBC0095EAC9 /* AppDelegate.swift */; };
 		0CBE44561DB10DBC0095EAC9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CBE44551DB10DBC0095EAC9 /* ViewController.swift */; };
 		0CBE44591DB10DBC0095EAC9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0CBE44571DB10DBC0095EAC9 /* Main.storyboard */; };
@@ -16,6 +18,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0C4C8FBE1DB65BE00090FEA7 /* CurryVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurryVC.swift; sourceTree = "<group>"; };
+		0C4C8FC21DB663290090FEA7 /* CalculatorVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalculatorVC.swift; sourceTree = "<group>"; };
 		0CBE44501DB10DBC0095EAC9 /* TestTheGithub.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestTheGithub.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0CBE44531DB10DBC0095EAC9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0CBE44551DB10DBC0095EAC9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -63,6 +67,8 @@
 				0CBE445F1DB10DBC0095EAC9 /* LaunchScreen.storyboard */,
 				0CBE44621DB10DBC0095EAC9 /* Info.plist */,
 				0CBE445A1DB10DBC0095EAC9 /* TestTheGithub.xcdatamodeld */,
+				0C4C8FBE1DB65BE00090FEA7 /* CurryVC.swift */,
+				0C4C8FC21DB663290090FEA7 /* CalculatorVC.swift */,
 			);
 			path = TestTheGithub;
 			sourceTree = "<group>";
@@ -140,8 +146,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0C4C8FC31DB663290090FEA7 /* CalculatorVC.swift in Sources */,
 				0CBE44561DB10DBC0095EAC9 /* ViewController.swift in Sources */,
 				0CBE445C1DB10DBC0095EAC9 /* TestTheGithub.xcdatamodeld in Sources */,
+				0C4C8FBF1DB65BE00090FEA7 /* CurryVC.swift in Sources */,
 				0CBE44541DB10DBC0095EAC9 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

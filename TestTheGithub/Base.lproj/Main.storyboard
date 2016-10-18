@@ -75,10 +75,10 @@
             </objects>
             <point key="canvasLocation" x="116" y="121.88905547226388"/>
         </scene>
-        <!--View Controller-->
+        <!--CurryVC-->
         <scene sceneID="DZT-Uc-zcz">
             <objects>
-                <viewController id="Gf9-NE-dbJ" sceneMemberID="viewController">
+                <viewController id="Gf9-NE-dbJ" customClass="CurryVC" customModule="TestTheGithub" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="opT-ex-UGy"/>
                         <viewControllerLayoutGuide type="bottom" id="Fg2-xi-BrK"/>
@@ -167,6 +167,9 @@
                                                 <state key="normal" title="Vote">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="openCalculator:" destination="Gf9-NE-dbJ" eventType="touchUpInside" id="Y6u-cM-aAN"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fa5-oz-XUj">
                                                 <color key="backgroundColor" red="0.18294266166303774" green="0.98149357699680473" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -177,7 +180,7 @@
                                             </button>
                                         </subviews>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="60" id="B3x-qE-7Sn"/>
+                                            <constraint firstAttribute="height" constant="40" id="B3x-qE-7Sn"/>
                                         </constraints>
                                     </stackView>
                                 </subviews>
@@ -194,13 +197,232 @@
                             <constraint firstItem="Vj4-Y2-iqd" firstAttribute="top" secondItem="opT-ex-UGy" secondAttribute="bottom" constant="10" id="wHp-ao-pHc"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <segue destination="LIh-cc-pQH" kind="showDetail" identifier="goCalculator" id="md5-ZP-C2C"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="K16-jU-KO4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="885.60000000000002" y="121.88905547226388"/>
         </scene>
+        <!--CalculatorVC-->
+        <scene sceneID="m41-nP-Vor">
+            <objects>
+                <viewController id="LIh-cc-pQH" customClass="CalculatorVC" customModule="TestTheGithub" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="o0v-mR-7PH"/>
+                        <viewControllerLayoutGuide type="bottom" id="gr2-GE-bwa"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="opP-MQ-zMA">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="calclatorBackground" translatesAutoresizingMaskIntoConstraints="NO" id="U70-xn-2Nz"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lt2-2P-ujy">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="ukA-Lj-bEq"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7ns-n8-XtZ">
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="i0I-aN-anv">
+                                <frame key="frameInset" minX="27" minY="96" width="320" height="540"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="6K7-ei-VhS">
+                                        <frame key="frameInset" width="320" height="100"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ryP-a1-Kl6">
+                                                <frame key="frameInset" width="100" height="100"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="100" id="3PR-ne-wrw"/>
+                                                    <constraint firstAttribute="height" constant="100" id="CC7-ky-agz"/>
+                                                </constraints>
+                                                <state key="normal" image="Number-7-icon"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oC9-yY-gSZ">
+                                                <frame key="frameInset" minX="110" width="100" height="100"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="100" id="DCU-2T-sUe"/>
+                                                    <constraint firstAttribute="height" constant="100" id="Mlv-mV-fW0"/>
+                                                </constraints>
+                                                <state key="normal" image="Number-8-icon"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gCF-XI-vAx">
+                                                <frame key="frameInset" minX="220" width="100" height="100"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="100" id="2Nk-fT-XRz"/>
+                                                    <constraint firstAttribute="width" constant="100" id="yGh-Ll-dAK"/>
+                                                </constraints>
+                                                <state key="normal" image="Number-9-icon"/>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="BD4-54-RHt">
+                                        <frame key="frameInset" minY="110" width="320" height="100"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d9P-bP-PtV">
+                                                <frame key="frameInset" width="100" height="100"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="100" id="I60-gs-hvm"/>
+                                                    <constraint firstAttribute="width" constant="100" id="hei-K8-CWG"/>
+                                                </constraints>
+                                                <state key="normal" image="Number-4-icon"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ef3-OP-2v0">
+                                                <frame key="frameInset" minX="110" width="100" height="100"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="100" id="2iJ-8j-eNG"/>
+                                                    <constraint firstAttribute="width" constant="100" id="kRD-6L-7Xb"/>
+                                                </constraints>
+                                                <state key="normal" image="Number-5-icon"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e7M-E3-XcG">
+                                                <frame key="frameInset" minX="220" width="100" height="100"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="100" id="bw4-8g-ctF"/>
+                                                    <constraint firstAttribute="height" constant="100" id="gS8-27-QVc"/>
+                                                </constraints>
+                                                <state key="normal" image="Number-6-icon"/>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="vWf-FT-YJv">
+                                        <frame key="frameInset" minY="220" width="320" height="100"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mV2-dU-YTE">
+                                                <frame key="frameInset" width="100" height="100"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="100" id="4rL-tg-PMF"/>
+                                                    <constraint firstAttribute="width" constant="100" id="gPC-vc-Kt9"/>
+                                                </constraints>
+                                                <state key="normal" image="Number-1-icon"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xbl-tZ-Feu">
+                                                <frame key="frameInset" minX="110" width="100" height="100"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="100" id="A5C-om-vJg"/>
+                                                    <constraint firstAttribute="width" constant="100" id="Hhd-79-APr"/>
+                                                </constraints>
+                                                <state key="normal" image="Number-2-icon"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kut-qK-sV3">
+                                                <frame key="frameInset" minX="220" width="100" height="100"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="100" id="0Ds-at-WUd"/>
+                                                    <constraint firstAttribute="width" constant="100" id="CTK-pn-nae"/>
+                                                </constraints>
+                                                <state key="normal" image="Number-3-icon"/>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Xxe-JU-r38">
+                                        <frame key="frameInset" minY="330" width="320" height="100"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kqt-Gi-EDn">
+                                                <frame key="frameInset" width="100" height="100"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="100" id="Pac-3U-vkH"/>
+                                                    <constraint firstAttribute="width" constant="100" id="SaD-Er-Jw1"/>
+                                                </constraints>
+                                                <state key="normal" image="Number-0-icon"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sm7-US-nzY">
+                                                <frame key="frameInset" minX="110" width="100" height="100"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="100" id="9Kx-US-Kh0"/>
+                                                    <constraint firstAttribute="width" constant="100" id="oxB-dR-ELT"/>
+                                                </constraints>
+                                                <state key="normal" image="Math-equal-icon"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b3W-9Z-eWn">
+                                                <frame key="frameInset" minX="220" width="100" height="100"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="100" id="JnW-Gx-Oh4"/>
+                                                    <constraint firstAttribute="height" constant="100" id="spG-Ed-kqs"/>
+                                                </constraints>
+                                                <state key="normal" image="Math-plus-icon"/>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="dMf-Cm-Nrg">
+                                        <frame key="frameInset" minY="440" width="320" height="100"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="evP-PP-KTH">
+                                                <frame key="frameInset" width="100" height="100"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="100" id="Oij-W0-dvN"/>
+                                                    <constraint firstAttribute="width" constant="100" id="xLM-YA-Wqe"/>
+                                                </constraints>
+                                                <state key="normal" image="Math-minus-icon"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mzz-TH-BNr">
+                                                <frame key="frameInset" minX="110" width="100" height="100"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="100" id="Alp-VO-jti"/>
+                                                    <constraint firstAttribute="height" constant="100" id="WDA-ct-UKl"/>
+                                                </constraints>
+                                                <state key="normal" image="Math-multiply-icon"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RLl-18-LMu">
+                                                <frame key="frameInset" minX="220" width="100" height="100"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="100" id="66l-jq-uMt"/>
+                                                    <constraint firstAttribute="width" constant="100" id="d2r-SO-Cdv"/>
+                                                </constraints>
+                                                <state key="normal" image="Math-divide-icon"/>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="7ns-n8-XtZ" firstAttribute="top" secondItem="Lt2-2P-ujy" secondAttribute="bottom" constant="8" symbolic="YES" id="0QG-13-MsC"/>
+                            <constraint firstItem="Lt2-2P-ujy" firstAttribute="top" secondItem="opP-MQ-zMA" secondAttribute="top" constant="20" id="EAu-11-S0i"/>
+                            <constraint firstAttribute="trailing" secondItem="Lt2-2P-ujy" secondAttribute="trailing" id="Ffs-c5-Zf5"/>
+                            <constraint firstItem="7ns-n8-XtZ" firstAttribute="centerX" secondItem="Lt2-2P-ujy" secondAttribute="centerX" id="LIi-fr-kLl"/>
+                            <constraint firstItem="7ns-n8-XtZ" firstAttribute="leading" secondItem="opP-MQ-zMA" secondAttribute="leadingMargin" id="Pda-A1-xeQ"/>
+                            <constraint firstItem="gr2-GE-bwa" firstAttribute="top" secondItem="U70-xn-2Nz" secondAttribute="bottom" id="b3D-Mh-5K9"/>
+                            <constraint firstItem="U70-xn-2Nz" firstAttribute="leading" secondItem="opP-MQ-zMA" secondAttribute="leading" id="gc4-Ek-bI0"/>
+                            <constraint firstAttribute="trailing" secondItem="U70-xn-2Nz" secondAttribute="trailing" id="hN2-73-ah2"/>
+                            <constraint firstItem="Lt2-2P-ujy" firstAttribute="leading" secondItem="opP-MQ-zMA" secondAttribute="leading" id="sZe-Vv-OUl"/>
+                            <constraint firstItem="U70-xn-2Nz" firstAttribute="top" secondItem="opP-MQ-zMA" secondAttribute="top" id="zre-by-0ma"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="titleLab" destination="Lt2-2P-ujy" id="YUV-gq-tcc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Xsb-ee-6C5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1668" y="121.88905547226388"/>
+        </scene>
     </scenes>
     <resources>
+        <image name="Math-divide-icon" width="256" height="256"/>
+        <image name="Math-equal-icon" width="256" height="256"/>
+        <image name="Math-minus-icon" width="256" height="256"/>
+        <image name="Math-multiply-icon" width="256" height="256"/>
+        <image name="Math-plus-icon" width="256" height="256"/>
+        <image name="Number-0-icon" width="256" height="256"/>
+        <image name="Number-1-icon" width="256" height="256"/>
+        <image name="Number-2-icon" width="256" height="256"/>
+        <image name="Number-3-icon" width="256" height="256"/>
+        <image name="Number-4-icon" width="256" height="256"/>
+        <image name="Number-5-icon" width="256" height="256"/>
+        <image name="Number-6-icon" width="256" height="256"/>
+        <image name="Number-7-icon" width="256" height="256"/>
+        <image name="Number-8-icon" width="256" height="256"/>
+        <image name="Number-9-icon" width="256" height="256"/>
+        <image name="calclatorBackground" width="910" height="533"/>
         <image name="curry" width="400" height="458"/>
         <image name="daptors" width="256" height="256"/>
         <image name="huixiong" width="256" height="256"/>
