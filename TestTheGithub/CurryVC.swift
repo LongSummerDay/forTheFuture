@@ -15,6 +15,8 @@ class CurryVC: UIViewController {
 
         // Do any additional setup after loading the view.
     }
+    @IBAction func openOnepiece(_ sender: UIButton) {
+    }
 
     //go to the calculator screen with the generic segue
     @IBAction func openCalculator(_ sender: AnyObject) {
