@@ -477,6 +477,9 @@
                                                     <constraint firstAttribute="height" constant="100" id="spG-Ed-kqs"/>
                                                 </constraints>
                                                 <state key="normal" image="Math-plus-icon"/>
+                                                <connections>
+                                                    <segue destination="r2f-f5-PxS" kind="show" identifier="addNewBusiness" id="FQP-Kt-SBC"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -532,6 +535,206 @@
             </objects>
             <point key="canvasLocation" x="1668" y="121.88905547226388"/>
         </scene>
+        <!--BusinessVC-->
+        <scene sceneID="pQl-y4-YzT">
+            <objects>
+                <viewController id="r2f-f5-PxS" customClass="BusinessVC" customModule="TestTheGithub" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="yY9-7H-R4S"/>
+                        <viewControllerLayoutGuide type="bottom" id="NbJ-sk-6Gc"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="o4v-dd-ACR">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="xiaoxiongbeisi.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="AMJ-4S-2xP">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="135" id="tm0-KJ-2SR"/>
+                                </constraints>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5YN-zH-j02">
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="型号：" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ByI-Ts-dFe">
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="60" id="L4A-xx-7Mz"/>
+                                            <constraint firstAttribute="width" constant="90" id="LO0-xs-iUe"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="ZapfDingbatsITC" family="Zapf Dingbats" pointSize="30"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HcF-fn-WgX">
+                                        <accessibility key="accessibilityConfiguration" identifier="TypeSelector"/>
+                                    </pickerView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="HcF-fn-WgX" firstAttribute="height" secondItem="ByI-Ts-dFe" secondAttribute="height" id="6Jf-tp-dsa"/>
+                                </constraints>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="xgy-uI-uMZ">
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="数量：" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7hL-1I-ZPf">
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="90" id="49o-N5-G0X"/>
+                                            <constraint firstAttribute="height" constant="60" id="OM6-Z9-V7N"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="ZapfDingbatsITC" family="Zapf Dingbats" pointSize="30"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" keyboardDismissMode="interactive" translatesAutoresizingMaskIntoConstraints="NO" id="ovK-c5-glQ">
+                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences" keyboardType="numberPad" returnKeyType="done" enablesReturnKeyAutomatically="YES" secureTextEntry="YES"/>
+                                    </textView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="ovK-c5-glQ" firstAttribute="height" secondItem="7hL-1I-ZPf" secondAttribute="height" id="dZ6-Gd-fk0"/>
+                                </constraints>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YtL-Gc-ijp">
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="价格：" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Usv-ID-7wB">
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="60" id="67C-L1-Tyf"/>
+                                            <constraint firstAttribute="width" constant="90" id="AvN-FW-ixQ"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="ZapfDingbatsITC" family="Zapf Dingbats" pointSize="30"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" keyboardDismissMode="onDrag" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="UaK-eG-ICm">
+                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="UaK-eG-ICm" firstAttribute="height" secondItem="Usv-ID-7wB" secondAttribute="height" id="JZu-Eg-ke1"/>
+                                </constraints>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="O8g-SP-cVs">
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="买卖：" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kEC-Wb-r5i">
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="60" id="QOY-ve-XSK"/>
+                                            <constraint firstAttribute="width" constant="90" id="ja1-iP-T3U"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="ZapfDingbatsITC" family="Zapf Dingbats" pointSize="30"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nVk-ja-sch">
+                                        <accessibility key="accessibilityConfiguration" identifier="BuyOrSellFlag"/>
+                                    </pickerView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="nVk-ja-sch" firstAttribute="height" secondItem="kEC-Wb-r5i" secondAttribute="height" id="93b-nY-nRn"/>
+                                </constraints>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="diW-fw-Gqo">
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="客户：" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZlG-Nh-nz8">
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="60" id="HGu-oB-Wez"/>
+                                            <constraint firstAttribute="width" constant="90" id="cYO-Uc-NEu"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="ZapfDingbatsITC" family="Zapf Dingbats" pointSize="30"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" keyboardDismissMode="onDrag" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="EpC-my-Hc5">
+                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="EpC-my-Hc5" firstAttribute="height" secondItem="ZlG-Nh-nz8" secondAttribute="height" id="fgX-9e-nMm"/>
+                                </constraints>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aIx-ry-VRn">
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="日期：" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8VE-31-goG">
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="60" id="7jt-L8-FQX"/>
+                                            <constraint firstAttribute="width" constant="90" id="Rib-dg-guT"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="ZapfDingbatsITC" family="Zapf Dingbats" pointSize="30"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <datePicker clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="M6S-2J-jJ8">
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <date key="date" timeIntervalSinceReferenceDate="498895297.24855202">
+                                            <!--2016-10-23 06:01:37 +0000-->
+                                        </date>
+                                        <locale key="locale" localeIdentifier="zh-Hans"/>
+                                    </datePicker>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="M6S-2J-jJ8" firstAttribute="height" secondItem="8VE-31-goG" secondAttribute="height" id="9lF-OY-1E3"/>
+                                </constraints>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="aFO-ec-8Ub">
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3rW-Sc-tRU">
+                                        <color key="backgroundColor" red="1" green="0.26359986279999997" blue="0.10908239860000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="35"/>
+                                        <state key="normal" title="保存">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="puc-Us-nZg">
+                                        <color key="backgroundColor" red="0.18294266170000001" green="0.98149357699999995" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="35"/>
+                                        <state key="normal" title="清空">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="7Qu-Yl-VY0"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="xgy-uI-uMZ" firstAttribute="top" secondItem="5YN-zH-j02" secondAttribute="bottom" constant="8" id="2Kr-t9-NX4"/>
+                            <constraint firstAttribute="trailing" secondItem="YtL-Gc-ijp" secondAttribute="trailing" constant="8" id="2l4-Mm-9Hv"/>
+                            <constraint firstAttribute="trailing" secondItem="AMJ-4S-2xP" secondAttribute="trailing" id="6a4-Iy-XDh"/>
+                            <constraint firstItem="aFO-ec-8Ub" firstAttribute="leading" secondItem="o4v-dd-ACR" secondAttribute="leadingMargin" constant="8" id="8RE-Ii-nyP"/>
+                            <constraint firstItem="xgy-uI-uMZ" firstAttribute="leading" secondItem="o4v-dd-ACR" secondAttribute="leading" constant="8" id="BzR-UZ-f8E"/>
+                            <constraint firstAttribute="trailing" secondItem="diW-fw-Gqo" secondAttribute="trailing" constant="8" id="DWy-z4-2s0"/>
+                            <constraint firstItem="diW-fw-Gqo" firstAttribute="leading" secondItem="o4v-dd-ACR" secondAttribute="leading" constant="8" id="JnT-7A-j9v"/>
+                            <constraint firstItem="aIx-ry-VRn" firstAttribute="leading" secondItem="o4v-dd-ACR" secondAttribute="leading" constant="8" id="KC5-iz-icu"/>
+                            <constraint firstItem="AMJ-4S-2xP" firstAttribute="top" secondItem="o4v-dd-ACR" secondAttribute="top" id="MxN-Lo-cPB"/>
+                            <constraint firstItem="5YN-zH-j02" firstAttribute="top" secondItem="AMJ-4S-2xP" secondAttribute="bottom" constant="8" id="QvE-Di-dcK"/>
+                            <constraint firstItem="aIx-ry-VRn" firstAttribute="top" secondItem="diW-fw-Gqo" secondAttribute="bottom" constant="8" id="RLU-eY-RT6"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="aFO-ec-8Ub" secondAttribute="trailing" constant="8" id="Upy-7d-bz4"/>
+                            <constraint firstItem="5YN-zH-j02" firstAttribute="leading" secondItem="o4v-dd-ACR" secondAttribute="leading" constant="8" id="VvM-mU-dgp"/>
+                            <constraint firstAttribute="trailing" secondItem="xgy-uI-uMZ" secondAttribute="trailing" constant="8" id="Zcp-Xy-To2"/>
+                            <constraint firstItem="O8g-SP-cVs" firstAttribute="top" secondItem="YtL-Gc-ijp" secondAttribute="bottom" constant="8" id="bcJ-UJ-guY"/>
+                            <constraint firstItem="YtL-Gc-ijp" firstAttribute="top" secondItem="xgy-uI-uMZ" secondAttribute="bottom" constant="8" id="bsM-Qf-dhH"/>
+                            <constraint firstItem="YtL-Gc-ijp" firstAttribute="leading" secondItem="o4v-dd-ACR" secondAttribute="leading" constant="8" id="jFZ-hH-olE"/>
+                            <constraint firstAttribute="trailing" secondItem="O8g-SP-cVs" secondAttribute="trailing" constant="8" id="mo4-er-ngc"/>
+                            <constraint firstItem="diW-fw-Gqo" firstAttribute="top" secondItem="O8g-SP-cVs" secondAttribute="bottom" constant="8" id="mu0-j1-Rpe"/>
+                            <constraint firstItem="AMJ-4S-2xP" firstAttribute="leading" secondItem="o4v-dd-ACR" secondAttribute="leading" id="qcM-H2-ZoO"/>
+                            <constraint firstItem="O8g-SP-cVs" firstAttribute="leading" secondItem="o4v-dd-ACR" secondAttribute="leading" constant="8" id="tRB-C3-u9T"/>
+                            <constraint firstAttribute="trailing" secondItem="5YN-zH-j02" secondAttribute="trailing" constant="8" id="uQ1-6d-kOi"/>
+                            <constraint firstAttribute="trailing" secondItem="aIx-ry-VRn" secondAttribute="trailing" constant="8" id="viz-TX-kYc"/>
+                            <constraint firstItem="aFO-ec-8Ub" firstAttribute="top" secondItem="aIx-ry-VRn" secondAttribute="bottom" constant="8" id="xea-ce-jDy"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="buyOrSellFlag" destination="nVk-ja-sch" id="CEY-f1-zlB"/>
+                        <outlet property="typeSelector" destination="HcF-fn-WgX" id="egB-2e-y2A"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kEC-Kp-3OP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2508" y="121.88905547226388"/>
+        </scene>
     </scenes>
     <resources>
         <image name="Math-divide-icon" width="256" height="256"/>
@@ -557,5 +760,6 @@
         <image name="onepiece" width="1920" height="1080"/>
         <image name="rocket" width="256" height="256"/>
         <image name="spaceball-icon" width="32" height="32"/>
+        <image name="xiaoxiongbeisi.jpg" width="800" height="405"/>
     </resources>
 </document>
