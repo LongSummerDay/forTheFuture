@@ -452,6 +452,9 @@
                                                     <constraint firstAttribute="width" constant="100" id="CTK-pn-nae"/>
                                                 </constraints>
                                                 <state key="normal" image="Number-3-icon"/>
+                                                <connections>
+                                                    <segue destination="2wc-zf-RvC" kind="show" id="wId-NX-3AR"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -585,7 +588,7 @@
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" keyboardDismissMode="interactive" translatesAutoresizingMaskIntoConstraints="NO" id="ovK-c5-glQ">
                                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences" keyboardType="numberPad" returnKeyType="done" enablesReturnKeyAutomatically="YES" secureTextEntry="YES"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences" keyboardType="numberPad" enablesReturnKeyAutomatically="YES" secureTextEntry="YES"/>
                                     </textView>
                                 </subviews>
                                 <constraints>
@@ -603,10 +606,10 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" keyboardDismissMode="onDrag" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="UaK-eG-ICm">
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" keyboardDismissMode="interactive" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="UaK-eG-ICm">
                                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences" keyboardType="numberPad" enablesReturnKeyAutomatically="YES" secureTextEntry="YES"/>
                                     </textView>
                                 </subviews>
                                 <constraints>
@@ -643,7 +646,7 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" keyboardDismissMode="onDrag" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="EpC-my-Hc5">
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" keyboardDismissMode="interactive" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="EpC-my-Hc5">
                                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -684,6 +687,9 @@
                                         <state key="normal" title="保存">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <connections>
+                                            <action selector="save:" destination="r2f-f5-PxS" eventType="touchUpInside" id="hUo-Ao-t9Y"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="puc-Us-nZg">
                                         <color key="backgroundColor" red="0.18294266170000001" green="0.98149357699999995" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -691,6 +697,9 @@
                                         <state key="normal" title="清空">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <connections>
+                                            <action selector="clear:" destination="r2f-f5-PxS" eventType="touchUpInside" id="P0v-RS-CmJ"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -727,13 +736,222 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="buyOrSellFlag" destination="nVk-ja-sch" id="CEY-f1-zlB"/>
+                        <outlet property="buyOrSellSelector" destination="nVk-ja-sch" id="6wl-72-nwu"/>
+                        <outlet property="customer" destination="EpC-my-Hc5" id="ZOQ-xQ-XwU"/>
+                        <outlet property="date" destination="M6S-2J-jJ8" id="FIa-Xi-sY6"/>
+                        <outlet property="number" destination="ovK-c5-glQ" id="e6B-hA-TDX"/>
+                        <outlet property="price" destination="UaK-eG-ICm" id="iXH-Gh-nnW"/>
                         <outlet property="typeSelector" destination="HcF-fn-WgX" id="egB-2e-y2A"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kEC-Kp-3OP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2508" y="121.88905547226388"/>
+        </scene>
+        <!--BusinessVC2-->
+        <scene sceneID="81K-bW-DbF">
+            <objects>
+                <viewController id="2wc-zf-RvC" customClass="BusinessVC2" customModule="TestTheGithub" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="BHF-FU-lqY"/>
+                        <viewControllerLayoutGuide type="bottom" id="rea-g5-1I3"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="scn-Rf-YaV">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZhM-Cj-LRu">
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="xiaoxiongbeisi.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="asV-oi-cWY">
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="135" id="ak3-8g-k69"/>
+                                        </constraints>
+                                    </imageView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Dxb-Wj-7It">
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="型号：" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="739-Gw-PQ4">
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="739-Gw-PQ4" secondAttribute="height" multiplier="3:2" id="t9j-Aj-wVY"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="ZapfDingbatsITC" family="Zapf Dingbats" pointSize="30"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="V8k-7A-RQ8"/>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="V8k-7A-RQ8" firstAttribute="height" secondItem="739-Gw-PQ4" secondAttribute="height" id="LkW-lW-chQ"/>
+                                        </constraints>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ran-66-QB3">
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="数量：" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yms-SB-FNC">
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="yms-SB-FNC" secondAttribute="height" multiplier="3:2" id="DWF-jM-rKA"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="ZapfDingbatsITC" family="Zapf Dingbats" pointSize="30"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="ts7-Jf-dBP">
+                                                <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                            </textView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="ts7-Jf-dBP" firstAttribute="height" secondItem="yms-SB-FNC" secondAttribute="height" id="6RN-Fw-cw0"/>
+                                        </constraints>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xKV-c2-hM2">
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="价格：" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CWR-5G-ztm">
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="CWR-5G-ztm" secondAttribute="height" multiplier="3:2" id="G43-En-MQa"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="ZapfDingbatsITC" family="Zapf Dingbats" pointSize="30"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="J1g-PX-CWp">
+                                                <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                            </textView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="J1g-PX-CWp" firstAttribute="height" secondItem="CWR-5G-ztm" secondAttribute="height" id="HNB-gm-eoF"/>
+                                        </constraints>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tTc-Dw-agJ">
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="买卖：" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XYg-2a-APa">
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="XYg-2a-APa" secondAttribute="height" multiplier="3:2" id="AQn-q9-W37"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="ZapfDingbatsITC" family="Zapf Dingbats" pointSize="30"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="e3l-ci-Jwr"/>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="e3l-ci-Jwr" firstAttribute="height" secondItem="XYg-2a-APa" secondAttribute="height" id="e1G-yH-Eeb"/>
+                                        </constraints>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mwS-VT-DTP">
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="客户：" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e23-x5-uLJ">
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="e23-x5-uLJ" secondAttribute="height" multiplier="3:2" id="VJq-Cr-E8B"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="ZapfDingbatsITC" family="Zapf Dingbats" pointSize="30"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="6YT-u5-We3">
+                                                <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                            </textView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="6YT-u5-We3" firstAttribute="height" secondItem="e23-x5-uLJ" secondAttribute="height" id="YkG-1A-CSE"/>
+                                        </constraints>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mOa-4n-DUA">
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="客户：" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9k3-Yv-Sv6">
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="9k3-Yv-Sv6" secondAttribute="height" multiplier="3:2" id="vDv-RJ-jTL"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="ZapfDingbatsITC" family="Zapf Dingbats" pointSize="30"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="IAY-V5-EVd">
+                                                <date key="date" timeIntervalSinceReferenceDate="499168364.465855">
+                                                    <!--2016-10-26 09:52:44 +0000-->
+                                                </date>
+                                            </datePicker>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="IAY-V5-EVd" firstAttribute="height" secondItem="9k3-Yv-Sv6" secondAttribute="height" id="tKG-Lg-6fk"/>
+                                        </constraints>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="krq-YS-flf">
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lWB-Ux-oGC">
+                                                <color key="backgroundColor" red="1" green="0.15199759134938096" blue="0.11816074722069192" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" name="ZapfDingbatsITC" family="Zapf Dingbats" pointSize="30"/>
+                                                <state key="normal" title="保存">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aiA-2A-SJq">
+                                                <color key="backgroundColor" red="0.13382800101366832" green="0.98178640457065758" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" name="ZapfDingbatsITC" family="Zapf Dingbats" pointSize="30"/>
+                                                <state key="normal" title="清空">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="krq-YS-flf" firstAttribute="top" secondItem="mOa-4n-DUA" secondAttribute="bottom" constant="8" id="2G2-hx-qbN"/>
+                                    <constraint firstItem="Ran-66-QB3" firstAttribute="top" secondItem="Dxb-Wj-7It" secondAttribute="bottom" constant="8" id="2ll-DA-YGo"/>
+                                    <constraint firstItem="mOa-4n-DUA" firstAttribute="leading" secondItem="ZhM-Cj-LRu" secondAttribute="leading" constant="8" id="9WS-kv-9pl"/>
+                                    <constraint firstItem="asV-oi-cWY" firstAttribute="centerX" secondItem="ZhM-Cj-LRu" secondAttribute="centerX" id="AYz-3f-yWN"/>
+                                    <constraint firstItem="Ran-66-QB3" firstAttribute="leading" secondItem="ZhM-Cj-LRu" secondAttribute="leading" constant="8" id="D24-F6-dhG"/>
+                                    <constraint firstItem="mwS-VT-DTP" firstAttribute="leading" secondItem="ZhM-Cj-LRu" secondAttribute="leading" constant="8" id="DhL-uw-eA3"/>
+                                    <constraint firstAttribute="trailing" secondItem="Dxb-Wj-7It" secondAttribute="trailing" constant="8" id="HqS-cN-tzf"/>
+                                    <constraint firstAttribute="bottom" secondItem="krq-YS-flf" secondAttribute="bottom" id="Rhe-fo-o2l"/>
+                                    <constraint firstItem="mOa-4n-DUA" firstAttribute="top" secondItem="mwS-VT-DTP" secondAttribute="bottom" constant="8" id="SSW-5A-7Kx"/>
+                                    <constraint firstItem="tTc-Dw-agJ" firstAttribute="top" secondItem="xKV-c2-hM2" secondAttribute="bottom" constant="8" id="Vsa-uR-tmk"/>
+                                    <constraint firstAttribute="trailing" secondItem="xKV-c2-hM2" secondAttribute="trailing" constant="8" id="XfT-c9-il1"/>
+                                    <constraint firstItem="tTc-Dw-agJ" firstAttribute="leading" secondItem="ZhM-Cj-LRu" secondAttribute="leading" constant="8" id="YqG-bf-xlM"/>
+                                    <constraint firstItem="Dxb-Wj-7It" firstAttribute="leading" secondItem="ZhM-Cj-LRu" secondAttribute="leading" constant="8" id="cIR-aV-EW2"/>
+                                    <constraint firstItem="mwS-VT-DTP" firstAttribute="top" secondItem="tTc-Dw-agJ" secondAttribute="bottom" constant="8" id="ew8-Qd-nD9"/>
+                                    <constraint firstAttribute="trailing" secondItem="mwS-VT-DTP" secondAttribute="trailing" constant="8" id="hD6-x0-ngq"/>
+                                    <constraint firstAttribute="trailing" secondItem="tTc-Dw-agJ" secondAttribute="trailing" constant="8" id="hJs-Gm-Bli"/>
+                                    <constraint firstItem="xKV-c2-hM2" firstAttribute="leading" secondItem="ZhM-Cj-LRu" secondAttribute="leading" constant="8" id="mv4-ru-UTA"/>
+                                    <constraint firstAttribute="trailing" secondItem="krq-YS-flf" secondAttribute="trailing" constant="8" id="oq1-cf-mk7"/>
+                                    <constraint firstAttribute="trailing" secondItem="mOa-4n-DUA" secondAttribute="trailing" constant="8" id="pG5-my-vhQ"/>
+                                    <constraint firstAttribute="trailing" secondItem="Ran-66-QB3" secondAttribute="trailing" constant="8" id="pa9-NR-eWH"/>
+                                    <constraint firstItem="Dxb-Wj-7It" firstAttribute="top" secondItem="asV-oi-cWY" secondAttribute="bottom" constant="8" id="qpG-bM-hpN"/>
+                                    <constraint firstItem="krq-YS-flf" firstAttribute="leading" secondItem="ZhM-Cj-LRu" secondAttribute="leading" constant="8" id="suG-S7-74n"/>
+                                    <constraint firstItem="asV-oi-cWY" firstAttribute="leading" secondItem="ZhM-Cj-LRu" secondAttribute="leading" id="t45-o2-DJY"/>
+                                    <constraint firstItem="xKV-c2-hM2" firstAttribute="top" secondItem="Ran-66-QB3" secondAttribute="bottom" constant="8" id="u27-IJ-Xdu"/>
+                                    <constraint firstItem="asV-oi-cWY" firstAttribute="top" secondItem="ZhM-Cj-LRu" secondAttribute="top" id="uZe-If-1lJ"/>
+                                    <constraint firstAttribute="trailing" secondItem="asV-oi-cWY" secondAttribute="trailing" id="x3B-vA-CLd"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="ZhM-Cj-LRu" secondAttribute="trailing" id="7fU-hg-Cpe"/>
+                            <constraint firstItem="ZhM-Cj-LRu" firstAttribute="leading" secondItem="scn-Rf-YaV" secondAttribute="leading" id="VwE-No-Tze"/>
+                            <constraint firstItem="ZhM-Cj-LRu" firstAttribute="top" secondItem="scn-Rf-YaV" secondAttribute="top" id="jWk-iK-ihL"/>
+                            <constraint firstItem="rea-g5-1I3" firstAttribute="top" secondItem="ZhM-Cj-LRu" secondAttribute="bottom" id="tur-xe-EbK"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="buyOrSellSelector" destination="e3l-ci-Jwr" id="SUP-tE-M5b"/>
+                        <outlet property="clearBtn" destination="aiA-2A-SJq" id="t7w-K6-aPZ"/>
+                        <outlet property="customer" destination="6YT-u5-We3" id="0E6-XA-vO5"/>
+                        <outlet property="dateSelector" destination="IAY-V5-EVd" id="482-al-iQv"/>
+                        <outlet property="image" destination="asV-oi-cWY" id="pwm-JB-jSi"/>
+                        <outlet property="mainScrollView" destination="ZhM-Cj-LRu" id="T5w-kh-94r"/>
+                        <outlet property="number" destination="ts7-Jf-dBP" id="ZSL-hf-C73"/>
+                        <outlet property="price" destination="J1g-PX-CWp" id="Jzf-VA-ThD"/>
+                        <outlet property="saveBtn" destination="lWB-Ux-oGC" id="VfD-Pn-5Ji"/>
+                        <outlet property="typeSelector" destination="V8k-7A-RQ8" id="g3b-EJ-8jA"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Xh8-zn-X8s" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3176.8000000000002" y="121.88905547226388"/>
         </scene>
     </scenes>
     <resources>

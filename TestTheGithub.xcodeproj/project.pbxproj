@@ -13,6 +13,7 @@
 		0C1ABEEF1DBB6473004EF1F9 /* Business+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C1ABEEB1DBB6473004EF1F9 /* Business+CoreDataProperties.swift */; };
 		0C1ABEF31DBC69E4004EF1F9 /* xiaoxiongbeisi.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0C1ABEF21DBC69E4004EF1F9 /* xiaoxiongbeisi.jpg */; };
 		0C1ABEF61DBC8BC3004EF1F9 /* BusinessVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C1ABEF51DBC8BC3004EF1F9 /* BusinessVC.swift */; };
+		0C29A3651DC0B0DB00D6B205 /* BusinessVC2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C29A3641DC0B0DB00D6B205 /* BusinessVC2.swift */; };
 		0C4C8FBF1DB65BE00090FEA7 /* CurryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C4C8FBE1DB65BE00090FEA7 /* CurryVC.swift */; };
 		0C4C8FC31DB663290090FEA7 /* CalculatorVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C4C8FC21DB663290090FEA7 /* CalculatorVC.swift */; };
 		0C4C8FC51DB8EC010090FEA7 /* OnepieceVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C4C8FC41DB8EC010090FEA7 /* OnepieceVC.swift */; };
@@ -34,6 +35,7 @@
 		0C1ABEEB1DBB6473004EF1F9 /* Business+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Business+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		0C1ABEF21DBC69E4004EF1F9 /* xiaoxiongbeisi.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = xiaoxiongbeisi.jpg; sourceTree = "<group>"; };
 		0C1ABEF51DBC8BC3004EF1F9 /* BusinessVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BusinessVC.swift; sourceTree = "<group>"; };
+		0C29A3641DC0B0DB00D6B205 /* BusinessVC2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BusinessVC2.swift; sourceTree = "<group>"; };
 		0C4C8FBE1DB65BE00090FEA7 /* CurryVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurryVC.swift; sourceTree = "<group>"; };
 		0C4C8FC21DB663290090FEA7 /* CalculatorVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalculatorVC.swift; sourceTree = "<group>"; };
 		0C4C8FC41DB8EC010090FEA7 /* OnepieceVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnepieceVC.swift; sourceTree = "<group>"; };
@@ -98,6 +100,7 @@
 				0C4C8FBE1DB65BE00090FEA7 /* CurryVC.swift */,
 				0C4C8FD41DB9189B0090FEA7 /* VideoVC.swift */,
 				0C1ABEF51DBC8BC3004EF1F9 /* BusinessVC.swift */,
+				0C29A3641DC0B0DB00D6B205 /* BusinessVC2.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -237,6 +240,7 @@
 				0C4C8FC51DB8EC010090FEA7 /* OnepieceVC.swift in Sources */,
 				0CBE445C1DB10DBC0095EAC9 /* TestTheGithub.xcdatamodeld in Sources */,
 				0C4C8FBF1DB65BE00090FEA7 /* CurryVC.swift in Sources */,
+				0C29A3651DC0B0DB00D6B205 /* BusinessVC2.swift in Sources */,
 				0C1ABEF61DBC8BC3004EF1F9 /* BusinessVC.swift in Sources */,
 				0CBE44541DB10DBC0095EAC9 /* AppDelegate.swift in Sources */,
 			);
